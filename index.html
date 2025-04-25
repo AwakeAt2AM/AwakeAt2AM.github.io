@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio">
-    <title>Portfolio</title>
+    <title>Niko's Game Portfolio</title>
     <style>
         /* Reset some basic styling */
         * {
@@ -94,6 +94,19 @@
             transform: scale(1.1);
         }
 
+        /* Thumbnail Image Styling */
+        .game-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .game-item:hover img {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
         /* Footer Styling */
         footer {
             text-align: center;
@@ -132,24 +145,28 @@
 
     <section class="game-list">
         <article class="game-item">
+            <img src="images/bakery-aristocat-thumbnail.jpg" alt="Bakery Aristocat Thumbnail">
             <h2>Bakery Aristocat</h2>
             <p>A quirky bakery 2D platformer, where you collect bread cats and avoid rats!!</p>
             <a href="https://idaa.itch.io/bakery-aristocat" target="_blank">Play Bakery Aristocat</a>
         </article>
 
         <article class="game-item">
+            <img src="images/platformer-thumbnail.jpg" alt="Platformer Thumbnail">
             <h2>Platformer</h2>
             <p>A fun and chill 2D platformer</p>
             <a href="https://idaa.itch.io/platformer" target="_blank">Play Platformer</a>
         </article>
 
         <article class="game-item">
+            <img src="images/dwarf-cave-thumbnail.jpg" alt="Dwarf Cave Thumbnail">
             <h2>Dwarf Cave</h2>
             <p>2D platformer about a dwarf on a quest to find a diamond!</p>
             <a href="https://niko-mantykoski.itch.io/dwarf-cave" target="_blank">Play Dwarf Cave</a>
         </article>
 
         <article class="game-item">
+            <img src="images/daddy-date-thumbnail.jpg" alt="Daddy Date Thumbnail">
             <h2>Daddy Date</h2>
             <p>A light-hearted and quirky simulation where you try your luck on a dating app!</p>
             <a href="https://niko-mantykoski.itch.io/daddy-date" target="_blank">Play Daddy Date</a>
