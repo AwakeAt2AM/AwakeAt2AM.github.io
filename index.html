@@ -94,14 +94,16 @@
             transform: scale(1.1);
         }
 
-        /* Thumbnail Image Styling */
-        .game-item img {
+         /* Thumbnail Image Styling */
+            .game-item img {
             width: 100%;
-            height: auto;
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Crops images nicely */
             border-radius: 8px;
             margin-bottom: 15px;
             transition: transform 0.3s ease;
         }
+
 
         .game-item:hover img {
             transform: scale(1.05); /* Slight zoom effect on hover */
@@ -155,7 +157,7 @@
     <img src="images/SOTE-thumbnail.jpg" alt="SOTE Thumbnail">
     <h2>SOTE</h2>
     <p>Suomalainen projekti auttamaan Sosiaali ja terveydenhuollon opiskelijoita. </p>
-    <a href="https://niko-mantykoski.itch.io/sote" target="_blank">Play Spirit Station</a>
+    <a href="https://niko-mantykoski.itch.io/sote" target="_blank">Play Sote game</a>
 </article>
 
 
@@ -174,6 +176,7 @@
             <a href="https://niko-mantykoski.itch.io/daddy-date" target="_blank">Play Daddy Date</a>
         </article>
     </section>
+    <p>Contact me: <a href="mailto:nikomantykoski@gmail.com">your.email@example.com</a></p>
 
     <footer>
         <p>Thanks for checking out my portfolio</p>
