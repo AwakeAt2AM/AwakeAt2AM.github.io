@@ -65,10 +65,11 @@
 
         /* Game List Section */
         .game-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+        margin: 20px auto 0 auto;
+        max-width: 1200px; /* Keeps it from stretching too far on big screens */
         }
 
         /* Game Item Styling */
