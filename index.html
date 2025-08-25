@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio">
-    <title>Niko's game developer portfolio</title>
+    <title>Niko's Game & Blender Portfolio</title>
     <style>
         /* Reset some basic styling */
         * {
@@ -25,7 +25,7 @@
         /* Header Styling */
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             background-color: #333333; /* Dark grey */
             color: #FF356F; /* Hot pink */
             padding: 20px;
@@ -44,8 +44,8 @@
         /* Intro Section */
         .intro {
             text-align: center;
-            margin-bottom: 40px;
-            background-color: #3a3a3a; /* Slightly lighter dark */
+            margin-bottom: 20px;
+            background-color: #3a3a3a;
             padding: 20px;
             border-radius: 8px;
         }
@@ -63,18 +63,47 @@
             margin-bottom: 15px;
         }
 
-        /* Game List Section */
-        .game-list {
+        /* Toggle Buttons */
+        .portfolio-toggle {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-toggle button {
+            font-size: 1.1em;
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: 2px solid #FF356F;
+            background-color: #333333;
+            color: #FF356F;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .portfolio-toggle button:hover {
+            background-color: #FF356F;
+            color: #333;
+            transform: scale(1.05);
+        }
+
+        .portfolio-toggle .active {
+            background-color: #FF356F;
+            color: #333;
+        }
+
+        /* Game & Blender List Section */
+        .portfolio-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
 
-        /* Game Item Styling */
-        .game-item {
-            background-color: #3a3a3a; /* Slightly lighter dark */
-            border: 2px solid #FF356F; /* Pink border */
+        /* Portfolio Item Styling */
+        .portfolio-item {
+            background-color: #3a3a3a;
+            border: 2px solid #FF356F;
             border-radius: 8px;
             padding: 20px;
             text-align: center;
@@ -82,25 +111,25 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
         }
 
-        .game-item:hover {
+        .portfolio-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 6px 15px rgba(255, 53, 111, 0.4); /* Pinkish glow */
-            background-color: #555; /* Slight hover brighten */
+            box-shadow: 0 6px 15px rgba(255, 53, 111, 0.4);
+            background-color: #555;
         }
 
-        .game-item h2 {
+        .portfolio-item h2 {
             font-size: 1.8em;
             color: #FF356F;
             margin-bottom: 10px;
         }
 
-        .game-item p {
+        .portfolio-item p {
             font-size: 1.1em;
-            color: #f1f1f1; /* Light text for description */
+            color: #f1f1f1;
             margin-bottom: 15px;
         }
 
-        .game-item a {
+        .portfolio-item a {
             display: inline-block;
             font-size: 1.1em;
             color: #fff;
@@ -111,23 +140,22 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
-        .game-item a:hover {
-            background-color: #ff5d88; /* Slightly lighter pink on hover */
+        .portfolio-item a:hover {
+            background-color: #ff5d88;
             transform: scale(1.1);
         }
 
-         /* Thumbnail Image Styling */
-        .game-item img {
+        .portfolio-item img {
             width: 100%;
-            height: 200px; /* Fixed height */
-            object-fit: cover; /* Crops images nicely */
+            height: 200px;
+            object-fit: cover;
             border-radius: 8px;
             margin-bottom: 15px;
             transition: transform 0.3s ease;
         }
 
-        .game-item:hover img {
-            transform: scale(1.05); /* Slight zoom effect on hover */
+        .portfolio-item:hover img {
+            transform: scale(1.05);
         }
 
         /* Footer Styling */
@@ -139,18 +167,18 @@
         }
 
         footer a {
-            color: #FF356F; /* Hot pink color */
+            color: #FF356F;
             text-decoration: none;
             font-weight: bold;
         }
 
         footer a:hover {
-            color: #ff5d88; /* Slightly lighter pink on hover */
+            color: #ff5d88;
         }
 
-        /* Media Queries for responsiveness */
+        /* Media Queries */
         @media (max-width: 768px) {
-            .game-list {
+            .portfolio-list {
                 grid-template-columns: 1fr 1fr;
             }
         }
@@ -159,65 +187,116 @@
             header h1 {
                 font-size: 2em;
             }
-
             header p {
                 font-size: 1em;
             }
-
-            .game-item {
+            .portfolio-item {
                 padding: 15px;
+            }
+            .portfolio-toggle button {
+                padding: 8px 15px;
+                font-size: 1em;
+                margin: 0 5px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Game Development Portfolio</h1>
-        <p>Explore some of the games I've worked on and check them out!</p>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my Games and Blender Projects!</p>
     </header>
 
     <section class="intro">
         <h2>About Me</h2>
-        <p>Hi, I'm Niko, a passionate gamedev student from Finland! I enjoy exploring new ideas and challenges. My portfolio showcases a variety of projects that I have worked on as coder, from quirky games to serious projects, all of which reflect my growth as a developer.</p>
-        <p>Check out the games below!</p>
+        <p>Hi, I'm Niko, a passionate gamedev student from Finland! I enjoy coding, creating 3D models in Blender, and exploring new ideas. My portfolio showcases a variety of projects that reflect my growth as a developer and artist.</p>
+        <p>Use the buttons below to switch between my Games and Blender Projects!</p>
     </section>
 
-    <section class="game-list">
-        <article class="game-item">
+    <!-- Toggle Buttons -->
+    <div class="portfolio-toggle">
+        <button id="games-btn" class="active">Games</button>
+        <button id="blender-btn">Blender Projects</button>
+    </div>
+
+    <!-- Games Section -->
+    <section id="games-section" class="portfolio-list">
+        <article class="portfolio-item">
             <img src="images/bakery-aristocat-thumbnail.jpg" alt="Bakery Aristocat Thumbnail">
             <h2>Bakery Aristocat</h2>
-            <p>A quirky bakery 2D platformer, where you collect bread cats and avoid rats!!</p>
-            <a href="https://idaa.itch.io/bakery-aristocat" target="_blank">Play Bakery Aristocat</a>
+            <p>A quirky bakery 2D platformer, where you collect bread cats and avoid rats!</p>
+            <a href="https://idaa.itch.io/bakery-aristocat" target="_blank" rel="noopener noreferrer">Play Bakery Aristocat</a>
         </article>
 
-        <article class="game-item">
+        <article class="portfolio-item">
             <img src="images/SOTE-thumbnail.jpg" alt="SOTE Thumbnail">
             <h2>SOTE</h2>
-            <p>Suomalainen projekti auttamaan Sosiaali ja terveydenhuollon opiskelijoita. </p>
-            <a href="https://niko-mantykoski.itch.io/sote" target="_blank">Play Sote game</a>
+            <p>Suomalainen projekti auttamaan Sosiaali ja terveydenhuollon opiskelijoita.</p>
+            <a href="https://niko-mantykoski.itch.io/sote" target="_blank" rel="noopener noreferrer">Play Sote</a>
         </article>
 
-        <article class="game-item">
+        <article class="portfolio-item">
             <img src="images/dwarf-cave-thumbnail.jpg" alt="Dwarf Cave Thumbnail">
             <h2>Dwarf Cave</h2>
             <p>2D platformer about a dwarf on a quest to find a diamond!</p>
-            <a href="https://niko-mantykoski.itch.io/dwarf-cave" target="_blank">Play Dwarf Cave</a>
+            <a href="https://niko-mantykoski.itch.io/dwarf-cave" target="_blank" rel="noopener noreferrer">Play Dwarf Cave</a>
         </article>
 
-        <article class="game-item">
+        <article class="portfolio-item">
             <img src="images/daddy-date-thumbnail.png" alt="Daddy Date Thumbnail">
             <h2>Daddy Date</h2>
-            <p>A light-hearted and quirky simulation where you try your luck on a dating app!</p>
-            <a href="https://niko-mantykoski.itch.io/daddy-date" target="_blank">Play Daddy Date</a>
+            <p>A light-hearted simulation where you try your luck on a dating app!</p>
+            <a href="https://niko-mantykoski.itch.io/daddy-date" target="_blank" rel="noopener noreferrer">Play Daddy Date</a>
+        </article>
+    </section>
+
+    <!-- Blender Section -->
+    <section id="blender-section" class="portfolio-list" style="display:none;">
+        <article class="portfolio-item">
+            <img src="images/blender-spaceship.jpg" alt="Spaceship Render">
+            <h2>Sci-Fi Spaceship</h2>
+            <p>Modeled and textured a futuristic spaceship in Blender.</p>
+        </article>
+
+        <article class="portfolio-item">
+            <img src="images/blender-character.jpg" alt="Character Render">
+            <h2>3D Character</h2>
+            <p>A stylized 3D character created and rigged in Blender.</p>
+        </article>
+
+        <article class="portfolio-item">
+            <img src="images/blender-dungeon.jpg" alt="Dungeon Render">
+            <h2>Dungeon Environment</h2>
+            <p>A dungeon scene built in Blender with lighting and textures.</p>
         </article>
     </section>
 
     <footer>
         <p>Thanks for checking out my portfolio!</p>
         <p>Contact me at: pinerivernicholas@gmail.com</p>
-        <p>More in my Itch.io page!!</p>
-        <p><a href="https://niko-mantykoski.itch.io" target="_blank">Here!</a></p>
+        <p>More of my work on Itch.io:</p>
+        <p><a href="https://niko-mantykoski.itch.io" target="_blank" rel="noopener noreferrer">Here!</a></p>
     </footer>
 
+    <script>
+        const gamesBtn = document.getElementById('games-btn');
+        const blenderBtn = document.getElementById('blender-btn');
+        const gamesSection = document.getElementById('games-section');
+        const blenderSection = document.getElementById('blender-section');
+
+        gamesBtn.addEventListener('click', () => {
+            gamesSection.style.display = 'grid';
+            blenderSection.style.display = 'none';
+            gamesBtn.classList.add('active');
+            blenderBtn.classList.remove('active');
+        });
+
+        blenderBtn.addEventListener('click', () => {
+            gamesSection.style.display = 'none';
+            blenderSection.style.display = 'grid';
+            blenderBtn.classList.add('active');
+            gamesBtn.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
