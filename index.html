@@ -246,4 +246,65 @@
         </article>
 
         <article class="portfolio-item">
-            <img src="images/dwarf-cave-thumbnail.jpg" alt
+            <img src="images/dwarf-cave-thumbnail.jpg" alt="Dwarf Cave">
+            <h2>Dwarf Cave</h2>
+            <p>2D platformer about a dwarf on a quest to find a diamond!</p>
+            <a href="https://niko-mantykoski.itch.io/dwarf-cave" target="_blank" rel="noopener noreferrer">Play Dwarf Cave</a>
+        </article>
+
+        <article class="portfolio-item">
+            <img src="images/daddy-date-thumbnail.png" alt="Daddy Date">
+            <h2>Daddy Date</h2>
+            <p>A light-hearted simulation where you try your luck on a dating app!</p>
+            <a href="https://niko-mantykoski.itch.io/daddy-date" target="_blank" rel="noopener noreferrer">Play Daddy Date</a>
+        </article>
+    </section>
+
+    <section id="blender-section" class="portfolio-list" style="display:none;">
+        <article class="portfolio-item">
+            <img src="images/blender-spaceship.jpg" alt="Blender Spaceship">
+            <h2>COMING SOON</h2>
+            <p>WIP</p>
+        </article>
+
+        <article class="portfolio-item">
+            <img src="images/blender-character.jpg" alt="Blender Character">
+            <h2>COMING SOON</h2>
+            <p>WIP</p>
+        </article>
+
+        <article class="portfolio-item">
+            <img src="images/blender-dungeon.jpg" alt="Blender Dungeon">
+            <h2>COMING SOON</h2>
+            <p>WIP</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Thanks for checking out my portfolio!</p>
+        <p>Contact me at: <a href="mailto:pinerivernicholas@gmail.com">pinerivernicholas@gmail.com</a></p>
+        <p>More of my work on Itch.io: <a href="https://niko-mantykoski.itch.io" target="_blank" rel="noopener noreferrer">Here!</a></p>
+    </footer>
+
+    <script>
+        const gamesBtn = document.getElementById('games-btn');
+        const blenderBtn = document.getElementById('blender-btn');
+        const gamesSection = document.getElementById('games-section');
+        const blenderSection = document.getElementById('blender-section');
+
+        gamesBtn.addEventListener('click', () => {
+            gamesSection.style.display = 'grid';
+            blenderSection.style.display = 'none';
+            gamesBtn.classList.add('active');
+            blenderBtn.classList.remove('active');
+        });
+
+        blenderBtn.addEventListener('click', () => {
+            gamesSection.style.display = 'none';
+            blenderSection.style.display = 'grid';
+            blenderBtn.classList.add('active');
+            gamesBtn.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
