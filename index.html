@@ -3,31 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio">
+    <meta name="description" content="Niko Mäntykoski Portfolio">
     <title>Niko's Game & Blender Portfolio</title>
     <style>
-        /* Reset some basic styling */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body Styling */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #484848; /* Dark background */
-            color: #FF356F; /* Hot pink text */
+            background-color: #484848;
+            color: #FF356F;
             line-height: 1.6;
             padding: 20px;
         }
 
-        /* Header Styling */
         header {
             text-align: center;
             margin-bottom: 20px;
-            background-color: #333333; /* Dark grey */
-            color: #FF356F; /* Hot pink */
+            background-color: #333333;
+            color: #FF356F;
             padding: 20px;
             border-radius: 10px;
         }
@@ -41,7 +38,6 @@
             font-size: 1.2em;
         }
 
-        /* Intro Section */
         .intro {
             text-align: center;
             margin-bottom: 20px;
@@ -63,10 +59,9 @@
             margin-bottom: 15px;
         }
 
-        /* Toggle Buttons */
         .portfolio-toggle {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .portfolio-toggle button {
@@ -81,26 +76,21 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
-        .portfolio-toggle button:hover {
+        .portfolio-toggle button:hover,
+        .portfolio-toggle .active {
             background-color: #FF356F;
             color: #333;
             transform: scale(1.05);
         }
 
-        .portfolio-toggle .active {
-            background-color: #FF356F;
-            color: #333;
-        }
-
-        /* Game & Blender List Section */
         .portfolio-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
             margin-top: 20px;
+            justify-content: center;
         }
 
-        /* Portfolio Item Styling */
         .portfolio-item {
             background-color: #3a3a3a;
             border: 2px solid #FF356F;
@@ -158,7 +148,26 @@
             transform: scale(1.05);
         }
 
-        /* Footer Styling */
+        .itch-link {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .itch-link a {
+            font-size: 1.2em;
+            color: #333;
+            background-color: #FF356F;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .itch-link a:hover {
+            background-color: #ff5d88;
+            transform: scale(1.05);
+        }
+
         footer {
             text-align: center;
             margin-top: 40px;
@@ -176,7 +185,6 @@
             color: #ff5d88;
         }
 
-        /* Media Queries */
         @media (max-width: 768px) {
             .portfolio-list {
                 grid-template-columns: 1fr 1fr;
@@ -213,97 +221,29 @@
         <p>Use the buttons below to switch between my Games and Blender Projects!</p>
     </section>
 
-    <!-- Toggle Buttons -->
+    <div class="itch-link">
+        <a href="https://niko-mantykoski.itch.io" target="_blank" rel="noopener noreferrer">Visit My Itch.io Portfolio</a>
+    </div>
+
     <div class="portfolio-toggle">
         <button id="games-btn" class="active">Games</button>
         <button id="blender-btn">Blender Projects</button>
     </div>
 
-    <!-- Games Section -->
     <section id="games-section" class="portfolio-list">
         <article class="portfolio-item">
-            <img src="images/bakery-aristocat-thumbnail.jpg" alt="Bakery Aristocat Thumbnail">
+            <img src="images/bakery-aristocat-thumbnail.jpg" alt="Bakery Aristocat">
             <h2>Bakery Aristocat</h2>
             <p>A quirky bakery 2D platformer, where you collect bread cats and avoid rats!</p>
             <a href="https://idaa.itch.io/bakery-aristocat" target="_blank" rel="noopener noreferrer">Play Bakery Aristocat</a>
         </article>
 
         <article class="portfolio-item">
-            <img src="images/SOTE-thumbnail.jpg" alt="SOTE Thumbnail">
+            <img src="images/SOTE-thumbnail.jpg" alt="SOTE Project">
             <h2>SOTE</h2>
             <p>Suomalainen projekti auttamaan Sosiaali ja terveydenhuollon opiskelijoita.</p>
             <a href="https://niko-mantykoski.itch.io/sote" target="_blank" rel="noopener noreferrer">Play Sote</a>
         </article>
 
         <article class="portfolio-item">
-            <img src="images/dwarf-cave-thumbnail.jpg" alt="Dwarf Cave Thumbnail">
-            <h2>Dwarf Cave</h2>
-            <p>2D platformer about a dwarf on a quest to find a diamond!</p>
-            <a href="https://niko-mantykoski.itch.io/dwarf-cave" target="_blank" rel="noopener noreferrer">Play Dwarf Cave</a>
-        </article>
-
-        <article class="portfolio-item">
-            <img src="images/daddy-date-thumbnail.png" alt="Daddy Date Thumbnail">
-            <h2>Daddy Date</h2>
-            <p>A light-hearted simulation where you try your luck on a dating app!</p>
-            <a href="https://niko-mantykoski.itch.io/daddy-date" target="_blank" rel="noopener noreferrer">Play Daddy Date</a>
-        </article>
-    </section>
-
-    <!-- Blender Section -->
-    <section id="blender-section" class="portfolio-list" style="display:none;">
-        <article class="portfolio-item">
-            <img src="images/blender-spaceship.jpg" alt="...">
-            <h2>COMING SOON</h2>
-            <p>WIP</p>
-        </article>
-
-        <article class="portfolio-item">
-            <img src="images/blender-character.jpg" alt="...">
-            <h2>COMING SOON</h2>
-            <p>WIP</p>
-        </article>
-
-        <article class="portfolio-item">
-            <img src="images/blender-dungeon.jpg" alt="...">
-            <h2>COMING SOON</h2>
-            <p>WIP</p>
-        </article>
-    </section>
-    
- <section id="blender-section" class="portfolio-list" style="display:none;">
-        <article class="portfolio-item">
-            <img src="images/blender-spaceship.jpg" alt="...">
-            <h2>COMING SOON</h2>
-            <p>WIP</p>
-        </article>
-     
-    <footer>
-        <p>Thanks for checking out my portfolio!</p>
-        <p>Contact me at: pinerivernicholas@gmail.com</p>
-        <p>More of my work on Itch.io:</p>
-        <p><a href="https://niko-mantykoski.itch.io" target="_blank" rel="noopener noreferrer">Here!</a></p>
-    </footer>
-
-    <script>
-        const gamesBtn = document.getElementById('games-btn');
-        const blenderBtn = document.getElementById('blender-btn');
-        const gamesSection = document.getElementById('games-section');
-        const blenderSection = document.getElementById('blender-section');
-
-        gamesBtn.addEventListener('click', () => {
-            gamesSection.style.display = 'grid';
-            blenderSection.style.display = 'none';
-            gamesBtn.classList.add('active');
-            blenderBtn.classList.remove('active');
-        });
-
-        blenderBtn.addEventListener('click', () => {
-            gamesSection.style.display = 'none';
-            blenderSection.style.display = 'grid';
-            blenderBtn.classList.add('active');
-            gamesBtn.classList.remove('active');
-        });
-    </script>
-</body>
-</html>
+            <img src="images/dwarf-cave-thumbnail.jpg" alt
